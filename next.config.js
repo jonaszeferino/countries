@@ -1,7 +1,16 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+// export const images = {
+//   domains: ['countryflagsapi.com']
+// };
 
-module.exports = nextConfig
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'countryflagsapi.com',
+        port: '',
+        pathname: '/png/**',
+      },
+    ],
+  },
+}
